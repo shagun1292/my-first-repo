@@ -18,3 +18,9 @@ jobs:
 
          - name: print username
            run: echo "Hello $USER"
+
+   version:
+       runs-on: ubuntu-latest
+       steps:
+         - name: print version
+           run: java -version
