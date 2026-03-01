@@ -1,0 +1,15 @@
+# name of the workflow
+name: file dependent workflows
+
+on:
+    push:
+        branches: [main]
+        paths:               
+          - '**.html'
+
+jobs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: say hello to name:
+        run: echo "$USER"
+    
