@@ -1,0 +1,36 @@
+#name of the workflow
+name: cicd
+
+#runs on a trigger
+on:
+    workflow_dispatch: 
+
+jobs:
+    code: 
+        runs-on: ubuntu-latest
+        steps:
+          - name: checkout the repo
+            run:  echo "checkout the  java code"
+    build:
+        runs-on: ubuntu-latest
+        steps:
+          - name: build docker container
+            run: echo  "build docker container"
+    
+    test:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Test the container
+            run: echo "testing container"
+          
+            
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+           - name: docker deploy
+             run: echo "deploying the container"
+    
+    
+   
+
+    
